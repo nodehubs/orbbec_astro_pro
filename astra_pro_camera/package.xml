@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>tros_astra_camera</name>
+  <name>astra_pro_camera</name>
   <version>1.1.0</version>
   <description>TODO: Package description</description>
   <maintainer email="jian.dong@pobox.com">Joe Dong</maintainer>
@@ -30,7 +30,6 @@
   <depend>tf2_ros</depend>
   <depend>tf2_sensor_msgs</depend>
   <depend>tf2</depend>
-  <depend>tros_astra_camera_setup</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
