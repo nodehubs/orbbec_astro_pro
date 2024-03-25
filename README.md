@@ -23,7 +23,7 @@ tros_astra_camera包用于连接Orbbec Astro Pro相机，以ROS2标准消息格�
 
 ```bash
 sudo apt update
-sudo apt install -y tros_astra_camera_pro
+sudo apt install -y tros-astra-pro-camera
 ```
 ## 运行奥比中光Astro Pro
 
