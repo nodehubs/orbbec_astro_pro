@@ -23,16 +23,29 @@ tros_astra_camera包用于连接Orbbec Astro Pro相机，以ROS2标准消息格�
 
 通过终端或者VNC连接RDK X3，执行以下命令
 
+tros foxy 版本 
 ```bash
 sudo apt update
 sudo apt install -y tros-astra-pro-camera
 ```
+tros humble 版本
+```bash
+sudo apt update
+sudo apt install -y tros-humble-astra-pro-camera
+```
+
 ## 运行奥比中光Astro Pro
 
 在RDK终端中，执行以下命令启动Astro Pro
 
+tros foxy 版本
 ```bash
 source /opt/tros/setup.bash
+ros2 launch astra_pro_camera astra_pro.launch.xml
+```
+tros humble 版本
+```bash
+source /opt/tros/humble/setup.bash
 ros2 launch astra_pro_camera astra_pro.launch.xml
 ```
 
@@ -44,10 +57,16 @@ ros2 launch astra_pro_camera astra_pro.launch.xml
 
 1. PC上执行以下命令启动rviz2
 
-```bash
-source /opt/ros/humble/setup.bash
-ros2 run rviz2 rviz2
-```
+   tros foxy 版本
+   ```bash
+   source /opt/ros/foxy/setup.bash
+   ros2 run rviz2 rviz2
+   ```
+   tros humble 版本
+   ```bash
+   source /opt/ros/humble/setup.bash
+   ros2 run rviz2 rviz2
+   ```
 
 ![rviz](images/rviz_open.png  "OPEN")
 

@@ -23,17 +23,29 @@ The tros_astra_camera package is used to connect the Orbbec Astro Pro camera and
 
 Connect to RDK X3 through terminal or VNC, and execute the following commands
 
+tros foxy: 
 ```bash
 sudo apt update
 sudo apt install -y tros-astra-pro-camera
+```
+tros humble:
+```bash
+sudo apt update
+sudo apt install -y tros-humble-astra-pro-camera
 ```
 
 ## Run Orbbec Astro Pro
 
 In the RDK terminal, execute the following command to start Astro Pro
 
+tros foxy:
 ```bash
 source /opt/tros/setup.bash
+ros2 launch astra_pro_camera astra_pro.launch.xml
+```
+tros humble:
+```bash
+source /opt/tros/humble/setup.bash
 ros2 launch astra_pro_camera astra_pro.launch.xml
 ```
 
@@ -45,10 +57,16 @@ ros2 launch astra_pro_camera astra_pro.launch.xml
 
 1. Execute the following command on the PC to start rviz2
 
-```bash
-source /opt/ros/humble/setup.bash
-ros2 run rviz2 rviz2
-```
+    tros foxy:
+    ```bash
+    source /opt/ros/foxy/setup.bash
+    ros2 run rviz2 rviz2
+    ```
+    tros humble:
+    ```bash
+    source /opt/ros/humble/setup.bash
+    ros2 run rviz2 rviz2
+    ```
 
 ![rviz](images/rviz_open.png  "OPEN")2. Click "Add"->"By Topic" in Rviz and add topics /camera/color/image_raw, /depth/image_raw, /depth_points, /ir/image_raw to Rviz in sequence.
 
